@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom";
 const Landing = () => {
   let navigate = useNavigate();
   function register() {
-    navigate("/Register");
+    window.location.href = "https://dev-journey-ruby.vercel.app/register";
   }
 
   return (
@@ -84,7 +84,7 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                Register
+                Register for Wildcard
               </ShimmerButton>
             </div>
             <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
@@ -110,7 +110,7 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                Register
+                Register for Wildcard
               </ShimmerButton>
             </div>
           </div>
