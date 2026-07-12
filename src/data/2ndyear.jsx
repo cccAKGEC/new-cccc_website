@@ -11,7 +11,6 @@ import Vaishnavi from "../2024-2028batchimg/VaishnaviKrishnan.jpg";
 import Arpan from "../2024-2028batchimg/Arpan.jpg";
 import Aryan from "../2024-2028batchimg/AryanSingh.jpg";
 import Shaurya from "../2024-2028batchimg/ShauryaVerma.jpg";
-import Krish from "../2024-2028batchimg/Krish.webp";
 import Sanjana from "../2024-2028batchimg/Sanjana.jpeg";
 
 
@@ -64,16 +63,6 @@ export const obj2 = [
     github: "https://github.com/keshav1818",
     linkedin: "linkedin.com/in/keshav-kumar-a861a6380",
     instagram: "https://www.instagram.com/keshav.18.17.16?igsh=Mmd4dDZlYWdvYWgz",
-    year: "2ndyear",
-    "__v": 0
-  },
-  {
-    name: "Krish sah",
-    profile: Krish,
-    domain: "Backend Developer",
-    github: "https://github.com/codeWithkrish123",
-    linkedin: "https://www.linkedin.com/in/krish-sah-b6346732a",
-    instagram: "https://www.instagram.com/Says.krish",
     year: "2ndyear",
     "__v": 0
   },
