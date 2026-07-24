@@ -1167,7 +1167,7 @@ const RegisterOpen = () => {
                       <option value="CSE(core)">CSE</option>
                       <option value="CSE(AIML)">CSE(AIML)</option>
                       <option value="CSE(DS)">CSE(DS)</option>
-                      <option value="CSE(H)">CSE(Hindi)</option>
+                      <option value="CSE(H)">CSE(H)</option>
                       <option value="CS">CS</option>
                       <option value="IT">IT</option>
                       <option value="CSIT">CSIT</option>

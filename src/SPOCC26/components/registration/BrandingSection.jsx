@@ -37,21 +37,21 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
   const renderCoordinators = () => (
     <div className="flex flex-col gap-3.5 w-full max-w-[320px]">
       <button
-        onClick={() => copyToClipboard('+919546252112', 'coord1')}
+        onClick={() => copyToClipboard('+919653056207', 'coord1')}
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord1' ? 'border-[#00d2ff] text-[#00d2ff] shadow-[0_0_15px_rgba(0,210,255,0.3)]' : 'border-white/10 text-white/80 hover:border-[#00d2ff]/50 hover:text-white'}`}
       >
         <span>{copiedId === 'coord1' ? 'COPIED!' : 'COORDINATOR 1'}</span>
-        <span className={`opacity-50 group-hover:opacity-100 transition-all ${copiedId === 'coord1' ? 'text-[#00d2ff] opacity-100' : 'group-hover:text-[#00d2ff]'}`}>
-          {copiedId === 'coord1' ? '✓' : '📞'}
+        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord1' ? 'text-[#00d2ff] opacity-100' : 'group-hover:text-[#00d2ff]'}`}>
+          {copiedId === 'coord1' ? '✓' : '96530 56207'}
         </span>
       </button>
       <button
-        onClick={() => copyToClipboard('+918887654321', 'coord2')}
+        onClick={() => copyToClipboard('+919236243578', 'coord2')}
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord2' ? 'border-[#a855f7] text-[#a855f7] shadow-[0_0_15px_rgba(168,85,247,0.3)]' : 'border-white/10 text-white/80 hover:border-[#a855f7]/50 hover:text-white'}`}
       >
         <span>{copiedId === 'coord2' ? 'COPIED!' : 'COORDINATOR 2'}</span>
-        <span className={`opacity-50 group-hover:opacity-100 transition-all ${copiedId === 'coord2' ? 'text-[#a855f7] opacity-100' : 'group-hover:text-[#a855f7]'}`}>
-          {copiedId === 'coord2' ? '✓' : '📞'}
+        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord2' ? 'text-[#a855f7] opacity-100' : 'group-hover:text-[#a855f7]'}`}>
+          {copiedId === 'coord2' ? '✓' : '92362 43578'}
         </span>
       </button>
     </div>

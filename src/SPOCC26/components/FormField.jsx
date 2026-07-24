@@ -80,6 +80,11 @@ const FormField = ({
             animation: input-border-flicker 8s infinite;
           }
         }
+        /* Autofill detection animation */
+        @keyframes autofillStart { from {} to {} }
+        @keyframes autofillCancel { from {} to {} }
+        input:-webkit-autofill { animation-name: autofillStart; }
+        input:not(:-webkit-autofill) { animation-name: autofillCancel; }
       `}</style>
 
       {isSelect ? (
@@ -162,6 +167,16 @@ const FormField = ({
             }}
             placeholder={placeholder}
             className={`${baseInputStyles} ${readOnly ? 'opacity-70 cursor-not-allowed' : ''}`}
+            onAnimationStart={(e) => {
+              if (e.animationName === 'autofillStart') {
+                // Browser autofilled this field — force transparent bg + white text
+                e.target.style.setProperty('background-color', 'transparent', 'important');
+                e.target.style.setProperty('-webkit-box-shadow', '0 0 0 1000px transparent inset', 'important');
+                e.target.style.setProperty('box-shadow', '0 0 0 1000px transparent inset', 'important');
+                e.target.style.setProperty('-webkit-text-fill-color', '#ffffff', 'important');
+                e.target.style.setProperty('color', '#ffffff', 'important');
+              }
+            }}
           />
           {!error && <GradientBorder isActive={isFocused} />}
         </div>

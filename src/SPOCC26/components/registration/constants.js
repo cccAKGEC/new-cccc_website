@@ -4,7 +4,7 @@ export const BRANCH_OPTIONS = [
   { value: 'CSE(DS)', label: 'CSE (Data Science)' },
   { value: 'AIML', label: 'Artificial Intelligence & ML' },
   { value: 'CS', label: 'Computer Science (CS)' },
-  { value: 'CSE(H)', label: 'CSE (Hons.)' },
+  { value: 'CSE(H)', label: 'CSE(H)' },
   { value: 'IT', label: 'Information Technology (IT)' },
   { value: 'CSIT', label: 'CS & IT (CSIT)' },
   { value: 'ECE', label: 'Electronics & Communication (ECE)' },

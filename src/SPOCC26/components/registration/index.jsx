@@ -161,14 +161,20 @@ const RegistrationMain = () => {
 
     setIsSubmitting(true);
     try {
-      let captchaToken = turnstileToken;
+      // Always read the token directly from the widget first (avoids stale closure on state)
+      let captchaToken = null;
 
-      if (!captchaToken && recaptchaRef.current) {
-        captchaToken = recaptchaRef.current.getValue();
+      if (recaptchaRef.current && typeof recaptchaRef.current.getValue === 'function') {
+        captchaToken = recaptchaRef.current.getValue() || null;
+      }
+
+      // Fall back to state value if widget ref didn't give us a token
+      if (!captchaToken) {
+        captchaToken = turnstileToken || null;
       }
 
       if (!captchaToken && import.meta.env.VITE_RECAPTCHA_SITE_KEY) {
-        showToast('Please check the "I\'m not a robot" captcha box before submitting.');
+        showToast('Please complete the "I\'m not a robot" captcha before submitting.');
         setIsSubmitting(false);
         return;
       }
@@ -186,9 +192,6 @@ const RegistrationMain = () => {
         phoneNumber: formData.phoneNumber,
         residence: formData.residence,
         unstopId: formData.unstopId,
-        cfTurnstileResponse: captchaToken,
-        gRecaptchaResponse: captchaToken,
-        recaptchaToken: captchaToken,
         captchaToken: captchaToken,
       };
       const data = await sendOtp(payload);
