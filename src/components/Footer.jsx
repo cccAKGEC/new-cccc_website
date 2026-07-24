@@ -64,7 +64,7 @@ const Footer = () => {
 
       <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
 
-      <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
+      {/* <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
         <a href="https://www.facebook.com/ccc.akgec"><FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
         </a>
         <a href="https://www.linkedin.com/company/cloud-computing-cell-akgec/">
@@ -72,7 +72,7 @@ const Footer = () => {
         </a>
         <a href="https://www.instagram.com/ccc_akgec?igsh=YzljYTk1ODg3Zg==">
         <FaSquareInstagram className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" /></a>
-      </div>
+      </div> */}
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
         <ul className="text-white cursor-pointer sm:text-lg lg:text-xl font-poppins text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">

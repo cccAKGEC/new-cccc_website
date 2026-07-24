@@ -15,7 +15,7 @@ import { Techbuzz } from "./components/ETechbuzz";
 import {Contact5} from "./components/Contact5";
 import { Ereacticons } from "./components/Ereacticons";
 import { ECloud } from "./components/ECloud";
-import Register4 from "./components/Register4";
+import RegistrationForm from "./SPOCC26/components/RegistrationForm";
 import Success4 from "./Resgistration/Success4";
 
 const ProtectedSuccessRoute = ({ children }) => {
@@ -46,8 +46,8 @@ const App = () => {
             <Route path="/Events" element={<Events />} />
             <Route path="/Team" element={<TeamCards />} />
             <Route path="/Contact" element={<Contact5 />} />
-            <Route path="/Register" element={<Register4 />} />
-            {/* <Route path="/Register" element={<Register />} /> */}
+            <Route path="/register" element={<RegistrationForm />} />
+            <Route path="/Register" element={<RegistrationForm />} />
             <Route path="/Devclash" element={<Edevclash />} />
             <Route path="/Ereacticons" element={<Ereacticons />} />
             <Route path="/ECloud" element={<ECloud />} />

@@ -5,6 +5,36 @@
 body{
   background-color: black;
   overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.font-mochiy {
+  font-family: 'Mochiy Pop One', sans-serif !important;
+  font-weight: 400 !important;
+  line-height: 100% !important;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif !important;
+}
+
+/* Fix Browser Autofill White/Blue Background & Black Text Override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #040c24 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff !important;
+  transition: background-color 50000s ease-in-out 0s !important;
 }
 
 
@@ -113,3 +143,30 @@ input[type=number] {
 .shake {
   animation: shake 2s ease-in-out infinite; 
 }
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}
+
+/* Hide Google reCAPTCHA badge */
+.grecaptcha-badge { 
+  visibility: hidden !important; 
+}
+

@@ -12,10 +12,10 @@ const Open = () => {
   const navigate = useNavigate()
   const location = useLocation()
   useEffect(() => {
-    if (location.pathname === "/register") {
+    if (location.pathname.toLowerCase() === "/register") {
       setClose(true);
     }
-  }, []);
+  }, [location.pathname]);
 
   function msgClose() {
     setClose(true);
