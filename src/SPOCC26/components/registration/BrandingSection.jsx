@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaInstagram, FaPhone } from 'react-icons/fa';
 import PosterCard from '../PosterCard';
 import posterImg from '../elements/Main_Poster_Optimized.jpg';
 import mobileViewImg from '../elements/mobile view.jpeg';
@@ -42,8 +42,8 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord1' ? 'border-[#00d2ff] text-[#00d2ff] shadow-[0_0_15px_rgba(0,210,255,0.3)]' : 'border-white/10 text-white/80 hover:border-[#00d2ff]/50 hover:text-white'}`}
       >
         <span>{copiedId === 'coord1' ? 'COPIED!' : 'SHAURYA'}</span>
-        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord1' ? 'text-[#00d2ff] opacity-100' : 'group-hover:text-[#00d2ff]'}`}>
-          {copiedId === 'coord1' ? '✓' : '96530 56207'}
+        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide flex items-center gap-1.5 ${copiedId === 'coord1' ? 'text-[#00d2ff] opacity-100' : 'group-hover:text-[#00d2ff]'}`}>
+          {copiedId === 'coord1' ? '✓' : <><FaPhone className="text-[10px] shrink-0 text-red-500" />96530 56207</>}
         </span>
       </button>
       <button
@@ -51,8 +51,8 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord2' ? 'border-[#a855f7] text-[#a855f7] shadow-[0_0_15px_rgba(168,85,247,0.3)]' : 'border-white/10 text-white/80 hover:border-[#a855f7]/50 hover:text-white'}`}
       >
         <span>{copiedId === 'coord2' ? 'COPIED!' : 'AYUSH'}</span>
-        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord2' ? 'text-[#a855f7] opacity-100' : 'group-hover:text-[#a855f7]'}`}>
-          {copiedId === 'coord2' ? '✓' : '92362 43578'}
+        <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide flex items-center gap-1.5 ${copiedId === 'coord2' ? 'text-[#a855f7] opacity-100' : 'group-hover:text-[#a855f7]'}`}>
+          {copiedId === 'coord2' ? '✓' : <><FaPhone className="text-[10px] shrink-0 text-red-500" />92362 43578</>}
         </span>
       </button>
     </div>
@@ -79,12 +79,10 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[#00d2ff]/50 to-transparent"></div>
 
         <div className="flex items-center gap-3 mt-4 sm:mt-6 lg:mt-2 mb-3 sm:mb-4 hover:scale-102 transition-transform duration-300 bg-white/5 pr-5 pl-2.5 py-2 rounded-full border border-white/10 backdrop-blur-md">
-          <motion.img
+          <img
             src="/cccLogo.png"
             alt="CCC Logo"
             className="w-[32px] h-[32px] object-contain drop-shadow-[0_0_8px_rgba(0,210,255,0.5)]"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           />
           <span className="text-[13px] xl:text-[14px] font-black uppercase tracking-[0.3em] text-white/90">
             CLOUD COMPUTING CELL
