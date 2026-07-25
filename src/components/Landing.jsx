@@ -83,7 +83,7 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                REGISTRATION
+                REGISTER
               </ShimmerButton>
             </div>
 
@@ -108,7 +108,7 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                REGISTRATION
+                REGISTER
               </ShimmerButton>
             </div>
           </div>
