@@ -1,7 +1,9 @@
 export default async function handler(req, res) {
-  const { path } = req.query;
+  const { path, ...queryParams } = req.query;
   const pathString = Array.isArray(path) ? path.join('/') : (path || '');
-  const targetUrl = `https://api.register.kaarma.studio/api/${pathString}`;
+  
+  const queryString = new URLSearchParams(queryParams).toString();
+  const targetUrl = `https://api.register.kaarma.studio/api/${pathString}${queryString ? `?${queryString}` : ''}`;
 
   try {
     const fetchOptions = {
@@ -11,6 +13,10 @@ export default async function handler(req, res) {
         'accept': req.headers['accept'] || 'application/json',
       },
     };
+
+    if (req.headers.authorization) {
+      fetchOptions.headers['authorization'] = req.headers.authorization;
+    }
 
     if (['POST', 'PUT', 'PATCH'].includes(req.method) && req.body) {
       fetchOptions.body = typeof req.body === 'string' ? req.body : JSON.stringify(req.body);
