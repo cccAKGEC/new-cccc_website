@@ -72,8 +72,12 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
   }
 
   return (
-    <div className="w-full flex flex-col items-center lg:items-start justify-center animate-fade-in lg:pl-4 xl:pl-8 relative my-auto">
-
+    <motion.div
+      initial={{ opacity: 0, x: '-100vw' }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full flex flex-col items-center lg:items-start justify-center lg:pl-4 xl:pl-8 relative my-auto"
+    >
       {/* 1. TOP SECTION (Branding & Titles) */}
       <div className="flex flex-col items-center lg:items-start w-full relative z-10">
         <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-[#00d2ff]/50 to-transparent"></div>
@@ -183,6 +187,6 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         </div>
       </div>
 
-    </div>
+    </motion.div>
   );
 };

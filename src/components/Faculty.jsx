@@ -46,10 +46,10 @@
 // //   ))}
 // // </div>
 
-      
+
 // //     </div>
 // //     // </div>
-    
+
 // //   );
 // // };
 
@@ -85,7 +85,7 @@
 //             transition={{ duration: 1, ease: "easeIn" }}
 //             className="pht lg:w-3/6 w-full flex-col h-full flex justify-center items-center"
 //           >
-             
+
 //             <img
 //               src={sir}
 //               className="sm:h-64  h-32 max-[450px]:h-40  object-contain"
@@ -112,7 +112,7 @@
 //             transition={{ duration: 1, ease: "easeIn" }}
 //             className="pht lg:w-3/6 w-full h-full flex-col flex justify-center items-center bg-red-"
 //           >
-           
+
 //             <img
 //               src={shikha}
 //               className="sm:h-64 mt-4 h-32  max-[450px]:h-40 rounded- object-cover"
@@ -127,14 +127,14 @@
 //               </p>
 //             </div>
 
-            
+
 //             <div className="p sm:text-lg pb-2 text-xs sm:p-4 font-[500]  text-center">
 //             Santosh Mishra, Assistant Professor in IT department. having <br/> 15 years of teaching and 3 years of industry experience as <br/> Java software developer.
 //             </div>
-      
+
 //           </motion.div>
 
-         
+
 //         </div>
 
 //         {/* <div className="p sm:text-lg pb-2 text-xs sm:p-4 font-[500] max-w-[70vw] text-center">Prof. Santosh Sir and Prof. Shikha Ma’am from the IT Department serve as the guiding pillars of the Cloud Computing Cell. Their continuous support and mentorship play a crucial role in the growth of the society. They are dedicated to helping students explore cloud technologies and grow in their respective fields.</div> */}
@@ -159,7 +159,7 @@ const Faculty = () => {
   return (
     <div className="sm:max-w-[90vw]  lg:mb-3 mb- mt-20 sm:mt-0 m-auto w-full text-white flex justify-center items-center h-auto bg-green-">
       <div className="flex flex-col justify-center max-[450px]:w-[90vw] items-center pb-10 rounded-3xl bg-neutral-800 border-2 p-5 border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto">
-      {/* flex justify-center max-[450px]:w-[90vw] pb-10 rounded-3xl flex-col   bg-neutral-800 items-center border-2 p-5 border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto */}
+        {/* flex justify-center max-[450px]:w-[90vw] pb-10 rounded-3xl flex-col   bg-neutral-800 items-center border-2 p-5 border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto */}
         {/* Heading */}
         <TextAnimate
           animation="fadeIn"
@@ -202,7 +202,7 @@ const Faculty = () => {
           </motion.div>
 
           {/* Card 2 */}
-          <motion.div
+          {/* <motion.div
             initial={{ rotateY: 90, opacity: 0 }}
             whileInView={{ rotateY: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeIn" }}
@@ -226,7 +226,7 @@ const Faculty = () => {
               about teaching and guiding students in Cloud Computing and IT fields and 
               strong skills in DSA.
             </div>
-          </motion.div>
+          </motion.div> */}
 
         </div>
       </div>

@@ -130,7 +130,7 @@ export const FormContainer = ({
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        className="w-full max-w-[540px] lg:max-w-[620px] xl:max-w-[680px] mx-auto flex flex-col items-center justify-center relative py-1 sm:py-2.5 lg:py-3.5 px-3 sm:px-5 lg:px-9 xl:px-11 lg:rounded-[32px] lg:bg-[#001133]/60 lg:backdrop-blur-2xl lg:shadow-[0_20px_60px_rgba(0,0,0,0.6)] animate-form-flicker font-inter font-normal"
+        className="w-full max-w-[540px] lg:max-w-[620px] xl:max-w-[680px] mx-auto flex flex-col items-center justify-center relative py-1 sm:py-2.5 lg:py-3.5 px-3 sm:px-5 lg:px-9 xl:px-11 lg:rounded-[32px] lg:bg-[#001133]/60 lg:bg-transparent lg:shadow-[0_20px_60px_rgba(0,0,0,0.6)] animate-form-flicker font-inter font-normal"
       >
         {/* Gradient Border Mask (Desktop Only) */}
         <div

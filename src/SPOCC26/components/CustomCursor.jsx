@@ -60,7 +60,7 @@ export const CustomCursor = () => {
         translateY: '-50%',
         width: size,
         height: size,
-        backdropFilter: 'blur(3px) brightness(1.2) contrast(1.1) saturate(1.2)',
+        backdropFilter: 'blur(1px) brightness(1.2) contrast(1.1) saturate(1.2)',
         WebkitBackdropFilter: 'blur(3px) brightness(1.2) contrast(1.1) saturate(1.2)',
         border: isPointer ? '1px solid rgba(0, 210, 255, 0.6)' : '1px solid rgba(255, 255, 255, 0.2)',
         backgroundColor: 'rgba(255, 255, 255, 0.03)',

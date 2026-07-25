@@ -83,7 +83,7 @@ const About = () => {
             <p className="text-xl max-[400px]:text-xs sm:text-[25p3] font-poppins mt-6">
               It offers a platform for managing and deploying cloud services,
               helping students stay competitive in the job market. The Cell is
-              coordinated by Mr. Santosh Kumar Mishra and Ms. Shikha Agrawal from the IT Department, who guide students in their academic
+              coordinated by Mr. Santosh Kumar Mishra from the IT Department, who guide students in their academic
               and professional development.
             </p>
             <div className="btn flex text-xl items-start gap-10 sm:gap-20 mt-8">
