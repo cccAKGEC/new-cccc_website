@@ -40,7 +40,7 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         onClick={() => copyToClipboard('+919653056207', 'coord1')}
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord1' ? 'border-[#00d2ff] text-[#00d2ff] shadow-[0_0_15px_rgba(0,210,255,0.3)]' : 'border-white/10 text-white/80 hover:border-[#00d2ff]/50 hover:text-white'}`}
       >
-        <span>{copiedId === 'coord1' ? 'COPIED!' : 'COORDINATOR 1'}</span>
+        <span>{copiedId === 'coord1' ? 'COPIED!' : 'SHAURYA'}</span>
         <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord1' ? 'text-[#00d2ff] opacity-100' : 'group-hover:text-[#00d2ff]'}`}>
           {copiedId === 'coord1' ? '✓' : '96530 56207'}
         </span>
@@ -49,7 +49,7 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         onClick={() => copyToClipboard('+919236243578', 'coord2')}
         className={`group w-full py-3 px-5 rounded-2xl text-[12px] xl:text-[13px] font-bold tracking-widest bg-white/5 border hover:bg-white/10 transition-all duration-300 hover:scale-102 active:scale-95 backdrop-blur-sm flex items-center justify-between ${copiedId === 'coord2' ? 'border-[#a855f7] text-[#a855f7] shadow-[0_0_15px_rgba(168,85,247,0.3)]' : 'border-white/10 text-white/80 hover:border-[#a855f7]/50 hover:text-white'}`}
       >
-        <span>{copiedId === 'coord2' ? 'COPIED!' : 'COORDINATOR 2'}</span>
+        <span>{copiedId === 'coord2' ? 'COPIED!' : 'AYUSH'}</span>
         <span className={`text-[11px] opacity-70 group-hover:opacity-100 transition-all font-mono tracking-wide ${copiedId === 'coord2' ? 'text-[#a855f7] opacity-100' : 'group-hover:text-[#a855f7]'}`}>
           {copiedId === 'coord2' ? '✓' : '92362 43578'}
         </span>
@@ -107,12 +107,26 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
       <div className="flex flex-col lg:flex-row items-center lg:items-start w-full gap-4 sm:gap-5 lg:gap-5 xl:gap-8 relative z-10 mt-0 sm:mt-1">
 
         {/* Poster Wrapper (Mobile & Desktop) */}
-        <div className="flex relative my-0 shrink-0">
-          <div className="relative w-[210px] sm:w-[250px] lg:w-[220px] xl:w-[265px] aspect-square shrink-0 rounded-2xl overflow-hidden border border-white/10 drop-shadow-[0_0_25px_rgba(0,210,255,0.2)] hover:border-[#00d2ff]/50 hover:scale-[1.02] transition-all duration-500 cursor-pointer group" onClick={() => setShowPoster(true)}>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
-              <span className="text-white text-[10px] sm:text-[11px] font-bold tracking-[0.2em] bg-black/50 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full backdrop-blur-md">CLICK TO ENLARGE</span>
+        <div className="flex relative my-0 shrink-0 w-full lg:w-auto justify-center">
+          <div
+            className="relative w-full max-w-[360px] sm:max-w-[480px] lg:w-[220px] xl:w-[265px] aspect-[2080/819] lg:aspect-square shrink-0 rounded-2xl overflow-hidden border border-white/10 drop-shadow-[0_0_25px_rgba(0,210,255,0.25)] hover:border-[#00d2ff]/50 hover:scale-[1.02] transition-all duration-500 cursor-pointer group"
+            onClick={() => setShowPoster(true)}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-2">
+              <span className="text-white text-[10px] sm:text-[11px] font-bold tracking-[0.2em] bg-black/50 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full backdrop-blur-md">CLICK TO ENLARGE</span>
             </div>
-            <img src="/sqr.png" alt="SPOCC'26 Poster" className="w-full h-full object-cover aspect-square opacity-90 group-hover:opacity-100 transition-opacity relative z-10" />
+            {/* Mobile Poster (< lg) */}
+            <img
+              src="/spocc_mobile_poster.jpg"
+              alt="SPOCC'26 Poster"
+              className="block lg:hidden w-full h-full object-fill opacity-95 group-hover:opacity-100 transition-opacity relative z-10"
+            />
+            {/* Desktop Poster (>= lg) */}
+            <img
+              src="/sqr.png"
+              alt="SPOCC'26 Poster"
+              className="hidden lg:block w-full h-full object-cover aspect-square opacity-90 group-hover:opacity-100 transition-opacity relative z-10"
+            />
           </div>
         </div>
 
