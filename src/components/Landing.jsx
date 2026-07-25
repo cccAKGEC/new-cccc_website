@@ -165,7 +165,7 @@ const Landing = () => {
                       repeatType: "loop",
                     }}
                   />
-                  WILDCARD
+                  REGISTRATION WILDCARD
                 </ShimmerButton>
               </a>
             </div>
