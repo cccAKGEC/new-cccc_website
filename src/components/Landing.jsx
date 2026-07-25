@@ -83,37 +83,8 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                REGISTRATION SPOCC&apos;26
+                REGISTRATION
               </ShimmerButton>
-
-              <a
-                href="https://dev-journey-ruby.vercel.app/register"
-                target="_blank"
-                rel="noreferrer"
-                className="w-full"
-              >
-                <ShimmerButton
-                  shimmerSize="4px"
-                  background="rgba(45, 20, 70, 1)"
-                  className="cursor-pointer shadow-md shadow-purple-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs md:text-sm px-4 py-2 border border-purple-500/50 w-full justify-center"
-                >
-                  <motion.div
-                    className="h-[12px] w-[12px] mr-2 rounded-full bg-purple-500 border-4 border-purple-300"
-                    initial={{ scale: 1, borderColor: "#a855f7" }}
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      borderColor: ["#a855f7", "#c084fc", "#a855f7"],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      ease: "easeOut",
-                      repeat: Infinity,
-                      repeatType: "loop",
-                    }}
-                  />
-                  REGISTRATION WILDCARD
-                </ShimmerButton>
-              </a>
             </div>
 
             <div className="text-white z-40 sm:hidden flex flex-col items-center gap-2 mt-4 font-bold w-full px-4">
@@ -137,37 +108,8 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                REGISTRATION SPOCC&apos;26
+                REGISTRATION
               </ShimmerButton>
-
-              <a
-                href="https://dev-journey-ruby.vercel.app/register"
-                target="_blank"
-                rel="noreferrer"
-                className="w-full"
-              >
-                <ShimmerButton
-                  shimmerSize="4px"
-                  background="rgba(45, 20, 70, 1)"
-                  className="cursor-pointer shadow-sm shadow-purple-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs w-full justify-center py-2 border border-purple-500/50"
-                >
-                  <motion.div
-                    className="h-[10px] w-[10px] mr-2 rounded-full bg-purple-500 border-4 border-white"
-                    initial={{ scale: 1, borderColor: "#a855f7" }}
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      borderColor: ["#a855f7", "#c084fc", "#a855f7"],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      ease: "easeOut",
-                      repeat: Infinity,
-                      repeatType: "loop",
-                    }}
-                  />
-                  REGISTRATION WILDCARD
-                </ShimmerButton>
-              </a>
             </div>
           </div>
 
