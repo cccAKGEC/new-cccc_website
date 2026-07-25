@@ -62,20 +62,19 @@ const Landing = () => {
               <br className="sm:mt-3 mt-0"/>innovative technologies,  shaping the future with passion and expertise
             </motion.p> */}
 
-            <div className="text-white z-40 text-xl hidden  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
+            <div className="text-white z-40 text-xl hidden sm:flex flex-col items-end gap-3 mt-4 font-bold absolute top-0 sm:top-5 right-8 sm:right-24 md:right-32 lg:right-40">
               <ShimmerButton
                 onClick={register}
-                shimmerSize = "4px"
-                  background = "rgba(36, 36, 36, 1)"
-                className="cursor-pointer  shadow-md shake shadow-violet-700  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
+                shimmerSize="4px"
+                background="rgba(36, 36, 36, 1)"
+                className="cursor-pointer shadow-md shake shadow-violet-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs md:text-sm px-4 py-2 w-full justify-center"
               >
-               
                 <motion.div
-                  className="h-[15px]  w-[15px] mr-4 rounded-full bg-violet-700 border-4 border-violet-400"
+                  className="h-[12px] w-[12px] mr-2 rounded-full bg-violet-700 border-4 border-violet-400"
                   initial={{ scale: 1, borderColor: "#7c3aed" }}
                   animate={{
                     scale: [1, 1.2, 1],
-                    borderColor: ["#7c3aed", "#9b4de6", "#7c3aed"], 
+                    borderColor: ["#7c3aed", "#9b4de6", "#7c3aed"],
                   }}
                   transition={{
                     duration: 1.5,
@@ -84,24 +83,52 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                Register
+                REGISTRATION SPOCC&apos;26
               </ShimmerButton>
-            </div>
-            <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
-             
-               <ShimmerButton
-                shimmerSize = "4px"
-                  background = "rgba(36, 36, 36, 1)"
-                onClick={register}
-                className="cursor-pointer shake shadow-sm shadow-violet-700  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
+
+              <a
+                href="https://dev-journey-ruby.vercel.app/register"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full"
               >
-              
+                <ShimmerButton
+                  shimmerSize="4px"
+                  background="rgba(45, 20, 70, 1)"
+                  className="cursor-pointer shadow-md shadow-purple-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs md:text-sm px-4 py-2 border border-purple-500/50 w-full justify-center"
+                >
+                  <motion.div
+                    className="h-[12px] w-[12px] mr-2 rounded-full bg-purple-500 border-4 border-purple-300"
+                    initial={{ scale: 1, borderColor: "#a855f7" }}
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      borderColor: ["#a855f7", "#c084fc", "#a855f7"],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      ease: "easeOut",
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                  />
+                  REGISTRATION WILDCARD
+                </ShimmerButton>
+              </a>
+            </div>
+
+            <div className="text-white z-40 sm:hidden flex flex-col items-center gap-2 mt-4 font-bold w-full px-4">
+              <ShimmerButton
+                shimmerSize="4px"
+                background="rgba(36, 36, 36, 1)"
+                onClick={register}
+                className="cursor-pointer shake shadow-sm shadow-violet-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs w-full justify-center py-2"
+              >
                 <motion.div
                   className="h-[10px] w-[10px] mr-2 rounded-full bg-violet-700 border-4 border-white"
                   initial={{ scale: 1, borderColor: "#7c3aed" }}
                   animate={{
                     scale: [1, 1.2, 1],
-                    borderColor: ["#7c3aed", "#9b4de6", "#7c3aed"], 
+                    borderColor: ["#7c3aed", "#9b4de6", "#7c3aed"],
                   }}
                   transition={{
                     duration: 1.5,
@@ -110,8 +137,37 @@ const Landing = () => {
                     repeatType: "loop",
                   }}
                 />
-                Register
+                REGISTRATION SPOCC&apos;26
               </ShimmerButton>
+
+              <a
+                href="https://dev-journey-ruby.vercel.app/register"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full"
+              >
+                <ShimmerButton
+                  shimmerSize="4px"
+                  background="rgba(45, 20, 70, 1)"
+                  className="cursor-pointer shadow-sm shadow-purple-700 hover:scale-105 font-poppins transition-all ease-in-out duration-500 text-xs w-full justify-center py-2 border border-purple-500/50"
+                >
+                  <motion.div
+                    className="h-[10px] w-[10px] mr-2 rounded-full bg-purple-500 border-4 border-white"
+                    initial={{ scale: 1, borderColor: "#a855f7" }}
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      borderColor: ["#a855f7", "#c084fc", "#a855f7"],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      ease: "easeOut",
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                  />
+                  WILDCARD
+                </ShimmerButton>
+              </a>
             </div>
           </div>
 
