@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const { path } = req.query;
   const pathString = Array.isArray(path) ? path.join('/') : (path || '');
-  const targetUrl = `http://65.2.218.214/api/${pathString}`;
+  const targetUrl = `https://api.register.kaarma.studio/api/${pathString}`;
 
   try {
     const fetchOptions = {

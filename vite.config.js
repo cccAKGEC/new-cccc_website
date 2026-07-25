@@ -21,7 +21,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://65.2.218.214',
+        target: 'https://api.register.kaarma.studio',
         changeOrigin: true,
         secure: false,
       },
