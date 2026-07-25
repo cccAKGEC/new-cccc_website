@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import PosterCard from '../PosterCard';
 import posterImg from '../elements/Main_Poster_Optimized.jpg';
+import mobileViewImg from '../elements/mobile view.jpeg';
 import SideRays from '../SideRays';
 
 export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, isClosing, onRegisterClick }) => {
@@ -117,7 +118,7 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
             </div>
             {/* Mobile Poster (< lg) */}
             <img
-              src="/spocc_mobile_poster.jpg"
+              src={mobileViewImg}
               alt="SPOCC'26 Poster"
               className="block lg:hidden w-full h-full object-fill opacity-95 group-hover:opacity-100 transition-opacity relative z-10"
             />
