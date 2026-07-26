@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const { path, ...queryParams } = req.query;
   const pathString = Array.isArray(path) ? path.join('/') : (path || '');
-  
+
   const queryString = new URLSearchParams(queryParams).toString();
   const targetUrl = `https://api.register.kaarma.studio/api/${pathString}${queryString ? `?${queryString}` : ''}`;
 
