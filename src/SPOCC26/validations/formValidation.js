@@ -48,7 +48,7 @@ export const validateField = (name, value, formData = {}) => {
 
     case 'phoneNumber':
       if (!v) return 'Phone number is required';
-      if (!PHONE_REGEX.test(v)) return 'Invalid phone number (10 digits, starts with 6-9)';
+      if (!PHONE_REGEX.test(v)) return 'Invalid phone number '; //   here i remove this line (10 digits, starts with 6-9)
       return '';
 
     case 'residence':
