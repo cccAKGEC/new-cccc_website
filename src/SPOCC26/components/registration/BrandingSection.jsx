@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaLinkedin, FaInstagram, FaPhone } from 'react-icons/fa';
 import PosterCard from '../PosterCard';
-import posterImg from '../elements/Main_Poster_Optimized.jpg';
-import mobileViewImg from '../elements/mobile view.jpeg';
+import squarePoster from '../elements/Group 257.svg';
+import rectanglePoster from '../elements/poster.svg';
 import SideRays from '../SideRays';
 
 export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, isClosing, onRegisterClick }) => {
@@ -112,7 +112,7 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
         {/* Poster Wrapper (Mobile & Desktop) */}
         <div className="flex relative my-0 shrink-0 w-full lg:w-auto justify-center">
           <div
-            className="relative w-full max-w-[360px] sm:max-w-[480px] lg:w-[220px] xl:w-[265px] aspect-[2080/819] lg:aspect-square shrink-0 rounded-2xl overflow-hidden border border-white/10 drop-shadow-[0_0_25px_rgba(0,210,255,0.25)] hover:border-[#00d2ff]/50 hover:scale-[1.02] transition-all duration-500 cursor-pointer group"
+            className="relative w-full max-w-[360px] sm:max-w-[480px] lg:w-[220px] xl:w-[265px] aspect-[376/149] lg:aspect-square shrink-0 rounded-2xl overflow-hidden border border-white/10 drop-shadow-[0_0_25px_rgba(0,210,255,0.25)] hover:border-[#00d2ff]/50 hover:scale-[1.02] transition-all duration-500 cursor-pointer group"
             onClick={() => setShowPoster(true)}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-2">
@@ -120,13 +120,13 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
             </div>
             {/* Mobile Poster (< lg) */}
             <img
-              src={mobileViewImg}
+              src={rectanglePoster}
               alt="SPOCC'26 Poster"
-              className="block lg:hidden w-full h-full object-fill opacity-95 group-hover:opacity-100 transition-opacity relative z-10"
+              className="block lg:hidden w-full h-full object-cover opacity-95 group-hover:opacity-100 transition-opacity relative z-10"
             />
             {/* Desktop Poster (>= lg) */}
             <img
-              src="/sqr.png"
+              src={squarePoster}
               alt="SPOCC'26 Poster"
               className="hidden lg:block w-full h-full object-cover aspect-square opacity-90 group-hover:opacity-100 transition-opacity relative z-10"
             />
