@@ -138,12 +138,12 @@ export const BrandingSection = ({ showPoster, setShowPoster, handleClosePoster, 
           {/* Coordinators Container */}
           {renderCoordinators()}
 
-          {/* REGISTER NOW button (MOBILE ONLY) */}
+          {/* REGISTRATION CLOSED button (MOBILE ONLY) */}
           <button
             onClick={onRegisterClick}
-            className="lg:hidden font-inter w-full max-w-[340px] py-3.5 sm:py-4.5 rounded-2xl font-bold bg-gradient-to-r from-[#00d2ff] to-[#bd22ff] border border-[#00d2ff]/40 text-[14px] sm:text-[16px] tracking-[0.25em] text-white shadow-[0_0_30px_rgba(0,210,255,0.4)] hover:scale-105 transition-transform duration-300 active:scale-95 mt-2"
+            className="lg:hidden font-inter w-full max-w-[340px] py-3.5 sm:py-4.5 rounded-2xl font-bold bg-gradient-to-r from-red-500/80 to-[#bd22ff]/80 border border-red-400/40 text-[13px] sm:text-[15px] tracking-[0.2em] text-white shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:scale-105 transition-transform duration-300 active:scale-95 mt-2"
           >
-            REGISTER NOW
+            REGISTRATION CLOSED
           </button>
 
           {/* Social media icons (Mobile & Desktop) */}

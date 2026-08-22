@@ -160,123 +160,38 @@ export const FormContainer = ({
               className="relative w-full flex flex-col gap-4.5 lg:gap-5 pt-1 pb-2"
             >
               {(step === 1 || step === 2) ? (
-                <div className="flex flex-col gap-3.5 sm:gap-4.5 lg:gap-5 w-full animate-fade-in">
-                  {/* Desktop Form Title */}
-                  <div className="hidden lg:flex justify-center items-center pb-0.5 pt-0.5">
-                    <h2 className="font-mochiy text-[20px] xl:text-[22px] font-normal tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-[#00d2ff] to-[#a855f7] drop-shadow-[0_0_15px_rgba(0,210,255,0.4)]">
-                      REGISTER
-                    </h2>
+                <div className="flex flex-col items-center justify-center text-center py-6 sm:py-8 px-4 sm:px-6 w-full animate-fade-in my-auto">
+                  {/* Glowing Lock Icon */}
+                  <div className="relative mb-5 sm:mb-6">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-[#00d2ff] to-[#a855f7] rounded-full blur-lg opacity-40 animate-pulse"></div>
+                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#001133]/90 border border-[#00d2ff]/40 flex items-center justify-center shadow-[0_0_25px_rgba(0,210,255,0.3)]">
+                      <svg className="w-8 h-8 sm:w-10 sm:h-10 text-[#00d2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    </div>
                   </div>
 
-                  <FormField
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                    placeholder="Enter Name"
-                    error={errors.name}
-                  />
-                  <div className="grid grid-cols-2 gap-3 lg:gap-4.5 w-full">
-                    <FormField
-                      name="studentNumber"
-                      value={formData.studentNumber}
-                      onChange={handleInputChange}
-                      onBlur={handleBlur}
-                      placeholder="Enter Student Number"
-                      error={errors.studentNumber}
-                    />
-                    <FormField
-                      type="select"
-                      name="gender"
-                      value={formData.gender}
-                      onChange={handleInputChange}
-                      placeholder="Select Gender"
-                      options={GENDER_OPTIONS}
-                      error={errors.gender}
-                    />
-                  </div>
-                  <FormField
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                    placeholder="Enter College Email Id"
-                    error={errors.email}
-                    readOnly={true}
-                  />
-                  <div className="grid grid-cols-2 gap-3 lg:gap-4.5 w-full">
-                    <FormField
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
-                      onChange={handleInputChange}
-                      onBlur={handleBlur}
-                      placeholder="Enter Phone Number"
-                      error={errors.phoneNumber}
-                    />
-                    <FormField
-                      type="select"
-                      name="branch"
-                      value={formData.branch}
-                      onChange={handleInputChange}
-                      placeholder="Branch"
-                      options={BRANCH_OPTIONS}
-                      error={errors.branch}
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 lg:gap-4.5 w-full">
-                    <FormField
-                      name="unstopId"
-                      value={formData.unstopId}
-                      onChange={handleInputChange}
-                      onBlur={handleBlur}
-                      placeholder="Enter Unstop Id or (NaN)"
-                      error={errors.unstopId}
-                    />
-                    <FormField
-                      type="select"
-                      name="residence"
-                      value={formData.residence}
-                      onChange={handleInputChange}
-                      placeholder="Select Residence"
-                      options={RESIDENCE_OPTIONS}
-                      error={errors.residence}
-                    />
+                  {/* Header Title where REGISTER was written */}
+                  <h2 className="font-mochiy text-[20px] sm:text-[24px] xl:text-[26px] font-normal tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-white via-[#00d2ff] to-[#a855f7] drop-shadow-[0_0_15px_rgba(0,210,255,0.4)] mb-4">
+                    REGISTRATION CLOSED
+                  </h2>
+
+                  {/* Status Badge */}
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-[11px] sm:text-[12px] font-bold tracking-widest uppercase mb-5 backdrop-blur-md">
+                    <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                    OFFICIALLY CLOSED
                   </div>
 
-                  <div className="flex justify-center my-2 sm:my-3 lg:my-4 w-full relative z-20 pointer-events-auto">
-                    {import.meta.env.VITE_RECAPTCHA_SITE_KEY ? (
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        size="normal"
-                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                        onChange={(token) => onTurnstileSuccess && onTurnstileSuccess(token)}
-                        onExpired={() => onTurnstileSuccess && onTurnstileSuccess('')}
-                        theme="dark"
-                      />
-                    ) : (
-                      <div
-                        className="cf-turnstile mx-auto mt-1"
-                        data-sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-                        data-callback="onTurnstileSuccess"
-                        data-theme="dark"
-                        data-size="flexible"
-                        ref={(el) => {
-                          if (el && onTurnstileSuccess) {
-                            window.onTurnstileSuccess = onTurnstileSuccess;
-                          }
-                        }}
-                      />
-                    )}
-                  </div>
+                  {/* Details & Subtext */}
+                  <p className="font-inter text-sm sm:text-base text-gray-200 max-w-[420px] leading-relaxed mb-5">
+                    Registrations for <span className="text-[#00d2ff] font-semibold">SPOCC&apos;26</span> - The Recruitment Drive are now officially closed.
+                  </p>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !turnstileToken}
-                    className="font-inter font-normal w-full mt-1 py-3.5 rounded-xl text-sm tracking-[0.25em] text-white bg-gradient-to-r from-[#00b0ff] to-[#bd22ff] border border-blue-400/25 hover:opacity-95 hover:scale-[1.01] hover:shadow-[0_0_20px_rgba(59,130,246,0.35)] shadow-md transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed select-none cursor-pointer"
-                  >
-                    {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
-                  </button>
+                  <div className="w-full max-w-[360px] border-t border-white/10 pt-5 mt-1">
+                    <p className="font-inter text-xs sm:text-sm text-gray-400 leading-relaxed">
+                      Thank you for the overwhelming response! For any queries, feel free to contact our coordinators.
+                    </p>
+                  </div>
                 </div>
               ) : (
                 <StepThree onVerify={handleVerifyOtp} isSubmitting={isSubmitting} onCancel={handleCancelOtp} onResend={handleCancelOtp} />
