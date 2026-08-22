@@ -176,11 +176,8 @@ export const FormContainer = ({
                     REGISTRATION CLOSED
                   </h2>
 
-                  {/* Status Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-[11px] sm:text-[12px] font-bold tracking-widest uppercase mb-5 backdrop-blur-md">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                    OFFICIALLY CLOSED
-                  </div>
+                  <br />
+                  <br />
 
                   {/* Details & Subtext */}
                   <p className="font-inter text-sm sm:text-base text-gray-200 max-w-[420px] leading-relaxed mb-5">
